@@ -20,7 +20,7 @@ class Album extends Component {
       isPlaying: false,
       isHovered: null,
       title: null,
-      isToggleOn: false,
+      isToggleOn: true
     };
     this.state.isHovered = false;
     this.audioElement = document.createElement('audio');
