@@ -1,29 +1,104 @@
+header {
+  top: 25%;
+  color: aquamarine;
+  height: 150px;
+}
+
+body {
+  color: white;
+  overflow-x: hidden;
+}
+
+/*General Containers*/
+.img {
+  margin: auto;
+  width: 25%;
+  height: 25%;
+}
+
+.route-container {
+  margin: auto;
+  width: 105%;
+  height: 25%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/*landing stuff*/
+.landing {
+  background-color: PowderBlue;
+  height: 100%;
+}
+
+/*Library stuff*/
+.library {
+  background-color: CornflowerBlue;
+}
+/*Album stuff*/
+.album {
+  background-color: CornflowerBlue;
+}
+
+
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 150px;
+}
+
+.centerContainer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+position: absolute;
+top: 0%;
+}
 
 .App {
+  background-color: aquamarine;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.point1 {
+  margin: -20px;
+  background-color: CornflowerBlue;
+  height: 400px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.point2 {
+  text-align: center;
+  height: 400px;
+  background-color: white;
+  color: CornflowerBlue;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.point-title {
+  margin: -4px;
+  font-size: 50px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.point-discription {
+  font-size: 25px;
 }
 
-.App-intro {
-  font-size: large;
+.addspace {
+  background-color: PowderBlue;
+  color: black;
+  height: 200px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.hero-title {
+  text-align: center;
 }

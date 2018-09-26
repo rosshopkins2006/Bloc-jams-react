@@ -222,7 +222,7 @@ renderIcons(song, index) {
              onMouseOver={() => this.handleMouseEnter(song, index)} onMouseOut={() => this.handleMouseExit(song, index)} >
                 <td>{this.renderIcons(song, index)}</td>
                 <td>{song.title}</td>
-                <td>{song.duration}</td>
+                <td>{this.formatTime(song.duration)}</td>
              </tr>
             )}
           </tbody>
@@ -234,7 +234,7 @@ renderIcons(song, index) {
           isToggleOn={this.state.isToggleOn}
           currentTime={this.audioElement.currentTime}
           currentVolume={this.audioElement.volume}
-          duration={this.audioElement.duration}
+          duration={this.formatTime(this.audioElement.duration)}
           volume={this.audioElement.volume}
           handleSongClick={() => this.handleSongClick(this.state.currentSong)}
           handlePrevClick={() => this.handlePrevClick()}

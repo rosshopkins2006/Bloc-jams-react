@@ -6,22 +6,45 @@ import Library from './components/Library';
 import Album from './components/Album';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      listOpen: false,
+      headerTitle: this.props.title
+    }
+  }
+
+  handleClickOutside = evt => {
+
+  }
+
   render() {
     return (
       <div className="App">
         <header>
+          <div  className="centerContainer">
+            <img className="logo" src={'/assets/images/bloc_jams_logo.png'} width={'400'} height={'200'} alt={"The Bloc Jams logo"}/>
+          </div>
           <nav>
-            <Link to='/'>Landing</Link>
-            <Link to='/library'>Library</Link>
+            <section className="menu">
+              <div className="dd-wrapper">
+                <div className="dd-header">
+                  <div className="dd-header-title"></div>
+                </div>
+                <ul className="dd-list">
+                  <li className="dd-list-item"><Link to='/'>Landing</Link></li>
+                  <li className="dd-list-item"><Link to='/library'>Library</Link></li>
+                </ul>
+              </div>
+            </section>
+
           </nav>
-          <h1>Bloc Jams</h1>
         </header>
-        <main>
+        <main className="route-container">
           <Route exact path="/" component={Landing} />
           <Route path="/library" component={Library} />
           <Route path="/album/:slug" component={Album} />
         </main>
-
       </div>
     );
   }
