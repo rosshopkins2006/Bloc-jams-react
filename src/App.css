@@ -1,105 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
 header {
-  top: 25%;
   color: aquamarine;
-  height: 150px;
 }
 
 body {
   color: white;
-  overflow-x: hidden;
+  width: 100vw;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+.App {
+  background-color: aquamarine;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100vh;
+  width: auto;
+  align-self: center;
+  overflow-y: hidden;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+/*Player Bar*/
+
+.volume-control {
+  width: 100 vw;
+}
+
+.player-bar {
+font-family: 'Gloria Hallelujah', cursive;
+margin: 0 auto;
+}
+
+#previous {
+transform: scale(0.75, 0.75)
+}
+
+#play-pause {
+transform: scale(0.75, 0.75)
+}
+
+#next {
+transform: scale(0.75, 0.75)
+}
+
+/* menu stuff */
+#menu-link {
+  text-decoration: none;
+  font-size: 25px;
+  text-shadow: 4px 2px 8px #000000;
+  color: DeepPink;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 /*General Containers*/
-.img {
-  margin: auto;
-  width: 25%;
-  height: 25%;
+.bloc-logo {
+  margin-top: -8vh;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 }
 
 .route-container {
-  margin: auto;
-  width: 105%;
-  height: 25%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+
 }
 
 /*landing stuff*/
 .landing {
+  margin: auto;
+  width: auto;
   background-color: PowderBlue;
-  height: 100%;
+  height: 75vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  box-shadow: 4px 2px 8px #000000;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.point1 {
+  margin: -10px;
+  background-color: CornflowerBlue;
+  height: 400px;
+  text-align: center;
+  box-shadow: 4px 2px 8px #000000;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.point2 {
+  margin: -10px;
+  text-align: center;
+  height: 400px;
+  background-color: white;
+  color: CornflowerBlue;
+  box-shadow: 4px 2px 8px #000000;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.point-title {
+  margin: -4px;
+  font-size: 40px;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: DeepPink;
+}
+
+.point-discription {
+  font-size: 20px;
+  font-display: block;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: PowderBlue;
+  text-shadow: 2px 2px 2px #000000;
+}
+.point-discription-2 {
+  font-size: 20px;
+  font-display: block;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: black;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+.addspace {
+  margin: -10px;
+  background-color: DeepPink;
+  color: black;
+  height: 400px;
+  text-align: center;
+  box-shadow: 4px 2px 8px #000000;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.addspace-title {
+  margin: -10px;
+  background-color: DeepPink;
+  color: black;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+.hero-title {
+  color: DeepPink;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 4px 2px 8px #000000;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.selling-points {
+  text-shadow: 4px 2px 8px #000000;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.lorem-picsum {
+  box-shadow: 4px 2px 8px #000000;
 }
 
 /*Library stuff*/
 .library {
   background-color: CornflowerBlue;
+  height: 75vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  box-shadow: 4px 2px 8px #000000;
+  font-family: 'Gloria Hallelujah', cursive;
 }
+
+#album-details {
+  text-decoration: none;
+  font-size: 25px;
+  text-align: left;
+  text-shadow: 4px 2px 8px #000000;
+  color: PowderBlue;
+  letter-spacing: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.library-detail-wrapper {
+  position: relative;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.library-title {
+  font-size: 30px;
+  color: DeepPink;
+  position: relative;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.library-artist {
+  font-size: 20px;
+  color: aquamarine;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.library-length {
+  font-size: 15px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.img {
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1, 1);
+  box-shadow: 8px 8px 16px #000000;
+}
+
 /*Album stuff*/
 .album {
   background-color: CornflowerBlue;
-}
-
-
-
-.logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
-  height: 150px;
-}
-
-.centerContainer {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: 100%;
-}
-
-.menu {
-position: absolute;
-top: 0%;
-}
-
-.App {
-  background-color: aquamarine;
-  margin: auto;
-  height: 100%;
-  width: 100%;
-}
-
-.point1 {
-  margin: -20px;
-  background-color: CornflowerBlue;
-  height: 400px;
-  text-align: center;
-}
-
-.point2 {
-  text-align: center;
-  height: 400px;
-  background-color: white;
-  color: CornflowerBlue;
-}
-
-.point-title {
-  margin: -4px;
-  font-size: 50px;
-}
-
-.point-discription {
+  height: 75vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  text-shadow: 4px 2px 8px #000000;
   font-size: 25px;
+  box-shadow: 4px 2px 8px #000000;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
-.addspace {
-  background-color: PowderBlue;
-  color: black;
-  height: 200px;
+#album-title{
   text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: DeepPink;
+}
+#artist {
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: aquamarine;
+}
+#release-info {
+  text-align: center;
+  background-color: CornflowerBlue;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: PowderBlue;
 }
 
-.hero-title {
-  text-align: center;
-  font-size: 20px;
+#album-cover-art {
+  box-shadow: 8px 8px 16px #000000;
+}
+
+.song-list {
+  background-color: CornflowerBlue;
+  color: Black;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Gloria Hallelujah', cursive;
 }

@@ -201,49 +201,97 @@ renderIcons(song, index) {
   render() {
     return(
       <section className="album">
-        <section id="album-info" >
-          <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
-          <div className="album-details">
-            <h1 id='album-title'>{this.state.album.title}</h1>
-            <h2 className='artist'>{this.state.album.artist}</h2>
-            <div id="release-info">{this.state.album.releaseInfo}</div>
+
+        <div class="mdl-grid">
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-cell mdl-cell--4-col">
+          <section id="album-info" >
+
+          <div class="mdl-grid">
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-cell mdl-cell--12-col">
+              <div class="mdl-grid">
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-cell mdl-cell--12-col">
+                  <img id="album-cover-art" src={this.state.album.albumCover} width="400px" height="400px" alt={this.state.album.title}/>
+                </div>
+              <div class="mdl-layout-spacer"></div>
+            </div>
+
+            </div>
+            <div class="mdl-layout-spacer"></div>
           </div>
-        </section>
-        <table id="song-list">
-          <colgroup>
-            <col id="song-number-column" />
-            <col id="song-title-column" />
-            <col id="song-duration-column" />
-          </colgroup>
-          <tbody>
-            {this.state.album.songs.map((song, index) =>
-             <tr className="song" key={index}
-             onClick={() => this.handleSongClick(song)}
-             onMouseOver={() => this.handleMouseEnter(song, index)} onMouseOut={() => this.handleMouseExit(song, index)} >
-                <td>{this.renderIcons(song, index)}</td>
-                <td>{song.title}</td>
-                <td>{this.formatTime(song.duration)}</td>
-             </tr>
-            )}
-          </tbody>
-        </table>
-        <div>{this.formatTime(this.state.currentTime)}</div>
-        <PlayerBar
-          isPlaying={this.state.isPlaying}
-          currentSong={this.state.currentSong}
-          isToggleOn={this.state.isToggleOn}
-          currentTime={this.audioElement.currentTime}
-          currentVolume={this.audioElement.volume}
-          duration={this.formatTime(this.audioElement.duration)}
-          volume={this.audioElement.volume}
-          handleSongClick={() => this.handleSongClick(this.state.currentSong)}
-          handlePrevClick={() => this.handlePrevClick()}
-          handleNextClick={() => this.handleNextClick()}
-          handleTimeChange={(e) => this.handleTimeChange(e)}
-          handleVolumeChange={(e) => this.handleVolumeChange(e)}
-          formatTime={() => this.formatTime()}
-          toggleTime={() => this.toggleTime()}
-          />
+
+            <div className="album-details">
+              <h1 id='album-title'>{this.state.album.title}</h1>
+              <h2 id='artist'>{this.state.album.artist}</h2>
+              <div id="release-info">{this.state.album.releaseInfo}</div>
+            </div>
+          </section>
+          <table className="song-list">
+            <colgroup>
+              <col id="song-number-column" />
+              <col id="song-title-column" />
+              <col id="song-duration-column" />
+            </colgroup>
+            <tbody>
+              {this.state.album.songs.map((song, index) =>
+               <tr className="song" key={index}
+               onClick={() => this.handleSongClick(song)}
+               onMouseOver={() => this.handleMouseEnter(song, index)} onMouseOut={() => this.handleMouseExit(song, index)} >
+                  <td>{this.renderIcons(song, index)}</td>
+                  <td>{song.title}</td>
+                  <td>{this.formatTime(song.duration)}</td>
+               </tr>
+              )}
+            </tbody>
+          </table>
+          </div>
+          <div class="mdl-layout-spacer"></div>
+        </div>
+
+        <div class="mdl-grid">
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-cell mdl-cell--5-col">
+
+            <div class="mdl-grid">
+              <div class="mdl-layout-spacer"></div>
+              <div class="mdl-cell mdl-cell--2-col">
+              <div>{this.formatTime(this.state.currentTime)}</div>
+              </div>
+              <div class="mdl-layout-spacer"></div>
+            </div>
+
+            <div class="mdl-grid">
+              <div class="mdl-layout-spacer"></div>
+              <div class="mdl-cell mdl-cell--12-col">
+                <PlayerBar
+                  isPlaying={this.state.isPlaying}
+                  currentSong={this.state.currentSong}
+                  isToggleOn={this.state.isToggleOn}
+                  currentTime={this.audioElement.currentTime}
+                  currentVolume={this.audioElement.volume}
+                  duration={this.formatTime(this.audioElement.duration)}
+                  volume={this.audioElement.volume}
+                  handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+                  handlePrevClick={() => this.handlePrevClick()}
+                  handleNextClick={() => this.handleNextClick()}
+                  handleTimeChange={(e) => this.handleTimeChange(e)}
+                  handleVolumeChange={(e) => this.handleVolumeChange(e)}
+                  formatTime={() => this.formatTime()}
+                  toggleTime={() => this.toggleTime()}
+                />
+              </div>
+              <div class="mdl-layout-spacer"></div>
+            </div>
+
+
+
+          </div>
+          <div class="mdl-layout-spacer"></div>
+        </div>
+
+
       </section>
     );
   }
